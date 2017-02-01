@@ -21,18 +21,18 @@
 		"rxjs": "^5.0.1",
 		"ts-helpers": "^1.1.1",
 		"zone.js": "^0.7.2",
-		"animate.css": "3.1.1",
+		"animate.css": "3.5.2",
 		"bootstrap": "^3.3.7",
 		"font-awesome": "^4.7.0",
 		"jquery": "^3.1.0",
 		"metismenu": "^2.5.0",
-		"pace-progress": "git+https://github.com/HubSpot/pace.git"
+		"pace-progress": "^1.0.2"
 	},
 	"devDependencies": {
 		"@angular/compiler-cli": "^2.4.5",
 		"@types/jasmine": "2.5.41",
 		"@types/node": "^7.0.4",
-		"angular-cli": "1.0.0-beta.26",
+		"angular-cli": "1.0.0-beta.28.3",
 		"codelyzer": "~2.0.0-beta.1",
 		"jasmine-core": "2.5.2",
 		"jasmine-spec-reporter": "3.2.0",
