@@ -1,12 +1,15 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { BreadcrumbsComponent } from './breadcrumbs.component';
 
 @NgModule({
 	declarations: [BreadcrumbsComponent],
-	imports: [BrowserModule, RouterModule, CommonModule],
-	exports: [BreadcrumbsComponent, BrowserModule, RouterModule, CommonModule]
+	exports: [BreadcrumbsComponent]
 })
-export class BreadcrumbsModule { }
+export class BreadcrumbsModule {
+	public static forRoot(): ModuleWithProviders {
+		return {
+			ngModule: BreadcrumbsModule,
+			providers: []
+		};
+	}
+}
