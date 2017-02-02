@@ -8,7 +8,6 @@ import { AppRoutingModule } from './app.routing';
 import { FooterComponent } from "./components/commons/footer/footer.component";
 import { NavigationComponent } from "./components/commons/navigation/navigation.component";
 import { TopnavbarComponent } from "./components/commons/topnavbar/topnavbar.component";
-import { BreadcrumbsModule } from "./components/commons/breadcrumbs/breadcrumbs.module";
 
 @NgModule({
 	declarations: [
@@ -21,8 +20,7 @@ import { BreadcrumbsModule } from "./components/commons/breadcrumbs/breadcrumbs.
 		BrowserModule,
 		FormsModule,
 		HttpModule,
-		AppRoutingModule,
-		BreadcrumbsModule
+		AppRoutingModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
