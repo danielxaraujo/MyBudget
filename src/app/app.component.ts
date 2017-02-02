@@ -5,7 +5,7 @@ declare var jQuery: any;
 
 @Component({
 	selector: 'app-root',
-	templateUrl: './app.Component.html'
+	template: '<router-outlet></router-outlet>'
 })
 export class AppComponent {
 

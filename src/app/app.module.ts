@@ -5,22 +5,18 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
-import { FooterComponent } from "./components/commons/footer/footer.component";
-import { NavigationComponent } from "./components/commons/navigation/navigation.component";
-import { TopnavbarComponent } from "./components/commons/topnavbar/topnavbar.component";
+import { LayoutsModule } from "./components/layout/layouts.module";
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		FooterComponent,
-		NavigationComponent,
-		TopnavbarComponent
 	],
 	imports: [
 		BrowserModule,
 		FormsModule,
 		HttpModule,
-		AppRoutingModule
+		AppRoutingModule,
+		LayoutsModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
