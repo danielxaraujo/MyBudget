@@ -9,8 +9,6 @@ import { FooterComponent } from './footer/footer.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { TopnavbarComponent } from './topnavbar/topnavbar.component';
 
-export { BasicLayoutComponent, FullLayoutComponent }
-
 @NgModule({
     declarations: [BasicLayoutComponent, FullLayoutComponent, FooterComponent, NavigationComponent, TopnavbarComponent],
     imports: [CommonModule, RouterModule, BrowserModule],
