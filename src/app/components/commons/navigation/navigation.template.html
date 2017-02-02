@@ -15,12 +15,10 @@
 					IN+
 				</div>
 			</li>
-			<!-- [ngClass]="{active: activeRoute('dashboard')}" -->
-			<li>
+			<li [ngClass]="{active: activeRoute('dashboard')}">
 				<a [routerLink]="['dashboard']"><i class="fa fa-th-large"></i> <span class="nav-label">Main view</span></a>
 			</li>
-			<!-- [ngClass]="{active: activeRoute('dashboard')}" -->
-			<li>
+			<li [ngClass]="{active: activeRoute('dashboard')}">
 				<a [routerLink]="['dashboard']"><i class="fa fa-desktop"></i> <span class="nav-label">Minor view</span> </a>
 			</li>
 			<li>
