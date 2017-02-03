@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 declare var jQuery:any;
 
@@ -10,7 +10,7 @@ declare var jQuery:any;
 
 export class NavigationComponent {
 
-    constructor(private router: Router) {}
+    constructor(private router: Router) { }
 
     ngAfterViewInit() {
         jQuery('#side-menu').metisMenu();

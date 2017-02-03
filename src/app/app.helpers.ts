@@ -8,6 +8,28 @@
  */
 import * as $ from 'jquery';
 
+/**
+let routes: Route[] = this.router.config;
+for (let i = 0; i < routes.length; i++) {
+	let route: Route = routes[i];
+	if (route.data) {
+		console.log(route);
+		console.log(route.data);
+		let childrens: Route[] = route.children;
+		for (let j = 0; j < childrens.length; j++) {
+			let children: any = childrens[j];
+			let lazys: Route[] = children._loadedConfig.routes;
+			for (let k = 0; k < lazys.length; k++) {
+				let lazy: Route = lazys[k];
+				if (lazy.data) {
+					console.log(lazy);
+					console.log(lazy.data);
+				}
+			}
+		}
+	}
+}
+*/
 export function correctHeight() {
 
 	var pageWrapper = $('#page-wrapper');
