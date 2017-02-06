@@ -14,10 +14,16 @@ const routes: Routes = [
 		data: {
 			title: 'Home'
 		},
-		children: [{
-			path: 'dashboard',
-			loadChildren: './views/dashboard/dashboard.module#DashboardModule'
-		}]
+		children: [
+			{
+				path: 'dashboard',
+				loadChildren: './views/dashboard/dashboard.module#DashboardModule'
+			},
+			{
+				path: 'budget',
+				loadChildren: './views/budget/budget.module#BudgetModule'
+			}
+		]
 	},
 	{
 		path: '**',
