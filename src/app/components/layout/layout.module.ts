@@ -7,7 +7,6 @@ import { BasicLayoutComponent } from './basic-layout.component';
 import { FullLayoutComponent } from './full-layout.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { NavigationItemComponent } from './navigation/navigation-item/navigation-item.component';
 import { TopnavbarComponent } from './topnavbar/topnavbar.component';
 
 export { BasicLayoutComponent, FullLayoutComponent }
@@ -18,7 +17,6 @@ export { BasicLayoutComponent, FullLayoutComponent }
         FullLayoutComponent,
         FooterComponent,
         NavigationComponent,
-        NavigationItemComponent,
         TopnavbarComponent
     ],
     imports: [
