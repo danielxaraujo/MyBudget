@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
-declare var jQuery:any;
+declare var jQuery: any;
 
 @Component({
     selector: 'navigation',
-    templateUrl: 'navigation.template.html'
+    templateUrl: './navigation.component.html'
 })
 export class NavigationComponent {
 
