@@ -12,7 +12,8 @@ const routes: Routes = [
 		path: '',
 		component: FullLayoutComponent,
 		data: {
-			title: 'Home'
+			title: 'Home',
+			icon: 'fa fa-home'
 		},
 		children: [
 			{
@@ -22,6 +23,10 @@ const routes: Routes = [
 			{
 				path: 'budget',
 				loadChildren: './views/budget/budget.module#BudgetModule'
+			},
+			{
+				path: 'account',
+				loadChildren: './views/account/account.module#AccountModule'
 			}
 		]
 	},

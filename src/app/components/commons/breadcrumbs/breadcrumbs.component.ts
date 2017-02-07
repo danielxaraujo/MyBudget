@@ -8,9 +8,9 @@ import 'rxjs/add/operator/filter';
 	template: `
 	<ol class="breadcrumb">
 		<template ngFor let-breadcrumb [ngForOf]="breadcrumbs" let-last = last>
-			<li *ngIf="breadcrumb.label.title&&breadcrumb.url.substring(breadcrumb.url.length-1) == '/' || breadcrumb.label.title&&last" [ngClass]="{active: last}">
-				<a *ngIf="!last" [routerLink]="breadcrumb.url">{{breadcrumb.label.title}}</a>
-				<strong *ngIf="last"npm>{{breadcrumb.label.title}}</strong>
+			<li *ngIf="breadcrumb.data.title&&breadcrumb.url.substring(breadcrumb.url.length-1) == '/' || breadcrumb.data.title&&last" [ngClass]="{active: last}">
+				<a *ngIf="!last" [routerLink]="breadcrumb.url"><i class="{{breadcrumb.data?.icon ? breadcrumb.data?.icon : ''}}"></i>{{'  ' + breadcrumb.data.title}}</a>
+				<strong *ngIf="last"npm>{{breadcrumb.data.title}}</strong>
 			</li>
 		</template>
 	</ol>`
@@ -33,7 +33,7 @@ export class BreadcrumbsComponent {
 						let routeSnapshot = route.snapshot;
 						url += '/' + routeSnapshot.url.map(segment => segment.path).join('/');
 						this.breadcrumbs.push({
-							label: route.snapshot.data,
+							data: route.snapshot.data,
 							url: url
 						});
 						currentRoute = route;
