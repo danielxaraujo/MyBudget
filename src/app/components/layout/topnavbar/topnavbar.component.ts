@@ -4,7 +4,7 @@ declare var jQuery: any;
 
 @Component({
     selector: 'topnavbar',
-    templateUrl: './topnavbar.component'
+    templateUrl: './topnavbar.component.html'
 })
 export class TopnavbarComponent {
     toggleNavigation(): void {
