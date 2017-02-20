@@ -16,7 +16,7 @@ export class AccountComponent implements OnInit {
 	ngOnInit() {
 		this.service.getAllTransactions().subscribe(data => {
 			this.transactions = data
-			console.log(this.transactions);
+			console.log(this.transactions[0]);
 		});
 	}
 }
