@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 
 import { AccountComponent } from './account.component';
 import { AccountRoutingModule } from './account-routing.module';
-import { PageHeadingModule } from "../../components/commons/page-heading/page-heading.module";
+import { SharedModule } from "../../shared/shared.module";
 
 @NgModule({
 	declarations: [AccountComponent],
-	imports: [AccountRoutingModule, PageHeadingModule]
+	imports: [AccountRoutingModule, SharedModule]
 })
 export class AccountModule { }
