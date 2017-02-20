@@ -21,7 +21,7 @@
 					<td><i *ngIf="transaction.flag" class="fa fa-circle"></i></td>
 					<td>{{transaction.date | date: 'dd/MM/yyyy'}}</td>
 					<td>{{transaction.check}}</td>
-					<td><input *ngIf="doCheck[i]" type="text" ([ngModel])="transaction.payee"><span *ngIf="!doCheck[i]">{{transaction.payee}}</span></td>
+					<td>{{transaction.payee}}</td>
 					<td>{{transaction.category}}</td>
 					<td>{{transaction.memo}}</td>
 					<td>{{transaction.outflow | currency:'BRL':true:'1.2-2'}}</td>
