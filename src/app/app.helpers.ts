@@ -6,7 +6,7 @@
  * smoothlyMenu() - add smooth fade in/out on navigation show/hide
  *
  */
-import * as $ from 'jquery';
+declare var $: any;
 
 /**
 let routes: Route[] = this.router.config;
@@ -55,6 +55,19 @@ export function correctHeight() {
 			pageWrapper.css("min-height", $(window).height() - 60 + "px");
 		}
 	}
+
+    $('.pie').peity('pie', {
+        fill: ['#1ab394', '#d7d7d7', '#ffffff']
+    })
+
+    $('.line').peity('line',{
+        fill: '#1ab394',
+        stroke:'#169c81',
+    })
+
+    $('.bar').peity('bar', {
+        fill: ["#1ab394", "#d7d7d7"]
+    })
 }
 
 export function detectBody() {

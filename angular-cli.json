@@ -23,6 +23,7 @@
 		],
 		"scripts": [
 			"../node_modules/jquery/dist/jquery.js",
+			"../node_modules/peity/jquery.peity.min.js",
 			"../node_modules/metismenu/dist/metisMenu.js",
 			"../node_modules/pace-progress/pace.min.js",
 			"../node_modules/bootstrap/dist/js/bootstrap.js"
