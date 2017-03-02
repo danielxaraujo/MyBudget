@@ -9,6 +9,7 @@ export class Transaction {
 		public category?: number,
 		public memo?: string,
 		public outflow?: number,
-		public inflow?: number
+		public inflow?: number,
+		public selected?: boolean
 	) { }
 }

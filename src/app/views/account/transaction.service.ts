@@ -10,10 +10,8 @@ export class TransactionService {
 
 	constructor(private http: Http) {}
 
-	getAllTransactions() : Observable<Transaction[]> {
-		return this.http.get(this.url)
-                    .map(this.extractData)
-                    .catch(this.handleError);
+	getAllTransactions() : Observable<[Transaction]> {
+		return this.http.get(this.url).map(this.extractData).catch(this.handleError);
 	}
 
 	private extractData(res: Response) {

@@ -8,15 +8,17 @@ import { Transaction } from './transaction';
 })
 export class AccountComponent implements OnInit {
 
-	transactions: Transaction[];
-	doCheck: boolean[];
+	transactions: [Transaction];
 
 	constructor(private service: TransactionService) {}
 
 	ngOnInit() {
 		this.service.getAllTransactions().subscribe(data => {
-			this.transactions = data
-			console.log(this.transactions[0]);
+			this.transactions = data;
+			for(let i = 0; i < this.transactions.length; i++) {
+				this.transactions[i].selected = false;
+			}
+			console.log(this.transactions);
 		});
 	}
 }
