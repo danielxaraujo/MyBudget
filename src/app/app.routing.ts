@@ -5,7 +5,7 @@ import { FullLayoutComponent } from './layout/layout.module';
 const routes: Routes = [
 	{
 		path: '',
-		redirectTo: 'dashboard',
+		redirectTo: 'budget',
 		pathMatch: 'full'
 	},
 	{
@@ -16,10 +16,6 @@ const routes: Routes = [
 			icon: 'fa fa-home'
 		},
 		children: [
-			{
-				path: 'dashboard',
-				loadChildren: './views/dashboard/dashboard.module#DashboardModule'
-			},
 			{
 				path: 'budget',
 				loadChildren: './views/budget/budget.module#BudgetModule'
@@ -32,7 +28,7 @@ const routes: Routes = [
 	},
 	{
 		path: '**',
-		redirectTo: 'dashboard',
+		redirectTo: 'budget',
 		pathMatch: 'full'
 	}
 ]

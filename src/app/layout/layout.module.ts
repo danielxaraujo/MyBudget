@@ -9,6 +9,8 @@ import { FooterComponent } from './footer/footer.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { TopnavbarComponent } from './topnavbar/topnavbar.component';
 
+import { AccountService } from '../views/account/account.service'
+
 export { BasicLayoutComponent, FullLayoutComponent }
 
 @NgModule({
@@ -26,6 +28,9 @@ export { BasicLayoutComponent, FullLayoutComponent }
     exports: [
         BasicLayoutComponent,
         FullLayoutComponent
-    ]
+	],
+	providers: [
+		AccountService
+	]
 })
 export class LayoutModule { }
