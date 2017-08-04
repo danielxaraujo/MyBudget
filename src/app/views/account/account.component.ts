@@ -19,7 +19,7 @@ export class AccountComponent implements OnInit {
 				private service: TransactionService) {}
 
 	ngOnInit() {
-		this.paramsSubscription = this.route.params.subscribe((params: any) => {
+		this.paramsSubscription = this.route.params.subscribe(params => {
 				const account_id = params['id'];
 				this.service.getTransactionsByAccountId(account_id).subscribe(data => {
 					this.transactions = data
