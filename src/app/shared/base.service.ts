@@ -8,12 +8,12 @@ export class BaseService<T> {
 
 	constructor(protected http: HttpClient) {}
 
-	getById(id : string, subUrl: string) : Observable<T> {
+	protected getById(id : string, subUrl: string) : Observable<T> {
 		let url : string = this.baseUrl + subUrl
 		return this.http.get<T>(this.baseUrl);
 	}
 
-	getAll(subUrl: string) : Observable<T[]> {
+	protected getAll(subUrl: string) : Observable<T[]> {
 		let url : string = this.baseUrl + subUrl
 		return this.http.get<T[]>(url);
 	}

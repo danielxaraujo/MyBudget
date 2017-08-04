@@ -1,34 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Rx';
 
-import { TransactionService } from './transaction.service';
-import { Transaction } from './transaction';
+import { AccountService } from './account.service';
+import { Account } from './account';
 
 @Component({
-	selector: 'account',
+	selector: '[account]',
 	templateUrl: './account.component.html'
 })
 export class AccountComponent implements OnInit {
 
-	paramsSubscription: Subscription;
-	transactions: Transaction[];
-	doCheck: boolean[];
+	accounts: Account[];
 
-	constructor(private route: ActivatedRoute,
-				private service: TransactionService) {}
+	constructor(private service: AccountService) {}
 
 	ngOnInit() {
-		this.paramsSubscription = this.route.params.subscribe(params => {
-				const account_id = params['id'];
-				this.service.getTransactionsByAccountId(account_id).subscribe(data => {
-					this.transactions = data
-				});
-			}
-		);
-	}
-
-	ngOnDestroy() {
-		this.paramsSubscription.unsubscribe();
+		this.service.getAllAccounts().subscribe(data => {
+			this.accounts = data
+		});
 	}
 }

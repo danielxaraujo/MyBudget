@@ -1,6 +1,8 @@
 export class Transaction {
 	constructor(
 		public _id: string,
+		public cleared: boolean,
+		public account_id: string,
 		public checkId?: string,
 		public flag?: string,
 		public date?: Date,
@@ -8,7 +10,6 @@ export class Transaction {
 		public category?: number,
 		public memo?: string,
 		public outflow?: number,
-		public inflow?: number,
-		public cleared: boolean = false
+		public inflow?: number
 	) { }
 }

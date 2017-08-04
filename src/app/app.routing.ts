@@ -21,8 +21,8 @@ const routes: Routes = [
 				loadChildren: './views/budget/budget.module#BudgetModule'
 			},
 			{
-				path: 'account',
-				loadChildren: './views/account/account.module#AccountModule'
+				path: 'transaction',
+				loadChildren: './views/transaction/transaction.module#TransactionModule'
 			}
 		]
 	},

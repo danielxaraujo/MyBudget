@@ -15,4 +15,8 @@ export class TransactionService extends BaseService<Transaction>  {
 	getTransactionsByAccountId(accountId: String) : Observable<Transaction[]> {
 		return this.getAll('transaction/account/'+ accountId);
 	}
+
+	getAllTransactions() : Observable<Transaction[]> {
+		return this.getAll('transaction/all');
+	}
 }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
+import { AccountModule } from '../views/account/account.module';
 
 import { BasicLayoutComponent } from './basic-layout.component';
 import { FullLayoutComponent } from './full-layout.component';
@@ -24,7 +25,9 @@ export { BasicLayoutComponent, FullLayoutComponent }
     imports: [
         CommonModule,
         RouterModule,
-        BrowserModule],
+		BrowserModule,
+		AccountModule
+	],
     exports: [
         BasicLayoutComponent,
         FullLayoutComponent
