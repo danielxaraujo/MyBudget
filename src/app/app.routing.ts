@@ -23,6 +23,10 @@ const routes: Routes = [
 			{
 				path: 'transaction',
 				loadChildren: './views/transaction/transaction.module#TransactionModule'
+			},
+			{
+				path: 'import',
+				loadChildren: './views/import/import.module#ImportModule'
 			}
 		]
 	},

@@ -12,36 +12,26 @@ import { Transaction } from './transaction';
 export class TransactionComponent implements OnInit {
 
 	paramsSubscription: Subscription;
+	filteredTransactions: Transaction[];
 	transactions: Transaction[];
-	doCheck: boolean[];
-	account_id: string;
 
-	constructor(private route: ActivatedRoute,
-				private service: TransactionService) {}
+	constructor(private route: ActivatedRoute, private service: TransactionService) {}
 
-	ngOnInit() {
+	async ngOnInit() {
 		this.service.getAllTransactions().subscribe(data => {
 			this.transactions = data
-			console.log(this.filteredTransactions());
-		});
-		this.paramsSubscription = this.route.params.subscribe(params => {
-			this.account_id = params['id'];
+			this.paramsSubscription = this.route.params.subscribe(params => {
+				let account_id = params['id']
+				this.filteredTransactions = this.filterTransactions(account_id)
+			});
 		});
 	}
 
-	filteredTransactions() : Transaction[] {
-		if (this.account_id) {
-			let array = this.transactions.map((value: Transaction, index: number, array: Transaction[]) => {
-				return value.account_id == this.account_id ? value : null;
-			});
-			console.log(array);
-			return array;
+	filterTransactions(account_id: string) : Transaction[] {
+		if (account_id) {
+			return this.transactions.filter(item => item.account_id == account_id);
 		} else {
 			return this.transactions;
 		}
-	}
-
-	ngOnDestroy() {
-		this.paramsSubscription.unsubscribe();
 	}
 }
