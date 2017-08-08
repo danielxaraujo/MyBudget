@@ -9,21 +9,14 @@
 </style>
 
 <div class="wrapper wrapper-content animated fadeInRight">
-
 	<div class="row">
-
 		<div class="col-lg-12">
 
 			<h3>Select files</h3>
 
-			<div ng2FileDrop [ngClass]="{'nv-file-over': hasBaseDropZoneOver}" (fileOver)="fileOverBase($event)" [uploader]="uploader"
-			    class="well my-drop-zone">
+			<div ng2FileDrop [ngClass]="{'nv-file-over': hasBaseDropZoneOver}" (fileOver)="fileOver($event)" [uploader]="uploader" class="well my-drop-zone">
 				Base drop zone
 			</div>
-
-		</div>
-
-		<div class="col-lg-12" style="margin-bottom: 40px">
 
 			<h3>Upload queue</h3>
 			<p>Queue length: {{ uploader?.queue?.length }}</p>
@@ -41,8 +34,8 @@
 				<tbody>
 					<tr *ngFor="let item of uploader.queue">
 						<td><strong>{{ item?.file?.name }}</strong></td>
-						<td *ngIf="uploader.isHTML5" nowrap>{{ item?.file?.size/1024/1024 | number:'.2' }} MB</td>
-						<td *ngIf="uploader.isHTML5">
+						<td>{{ item?.file?.size/1024/1024 | number:'.2' }} MB</td>
+						<td>
 							<div class="progress" style="margin-bottom: 0;">
 								<div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': item.progress + '%' }"></div>
 							</div>
@@ -70,7 +63,7 @@
 			<div>
 				<div>
 					Queue progress:
-					<div class="progress" style="">
+					<div class="progress">
 						<div class="progress-bar" role="progressbar" [ngStyle]="{ 'width': uploader.progress + '%' }"></div>
 					</div>
 				</div>
